@@ -1,9 +1,3 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 
 # Create your views here.
-def bienvenida(request):
-    return HttpResponse("¡Bienvenido a Mascotas!!!")
-
-
-def saludo(request, nombre):
-    return HttpResponse(f"¡Hola, {nombre}")
