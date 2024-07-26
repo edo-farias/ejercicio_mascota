@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de adopciones</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
+{% extends 'base.html' %}
 
-    </div>
-    
-</body>
-</html>
+{% block title %}Adopciones{% endblock %}
+
+{% block content %}
+    <h1 class="text-center"> Lista de adopciones</h1>
+    <ul class="list-group">
+        <li class="list-group-item">Adopcón 1</li>
+        <li class="list-group-item">Adopcón 2</li>
+        <li class="list-group-item">Adopcón 3</li>
+{%endblock%}

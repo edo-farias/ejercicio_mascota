@@ -1,19 +1,17 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listado de mascotas</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <h1>Listado de mascotas</h1>
-        <ul class="list-group">
-            
-        </ul>
-    </div>
-    
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Mascotas{% endblock %}
+
+{% block content %}
+    <h1 class="text-center"> Lista de mascotas </h1>
+    {% if mascotas %}
+    <ul class="list-group">
+        {% for mascota in mascotas %}
+        <li class="list-group-item"> {{mascota}}</li>
+        {% endfor %}
+    </ul> 
+    {% else %}
+    <p class="text-center">No hay mascotas registradas.</p>        
+    {% endif %}
+
+{%endblock%}
