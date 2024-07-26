@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Detalle de {{nombre}} {% endblock %}
+
+{% block content %}
+    <h1 class="text-center mt-5"> Detalle de {{nombre}}</h1>
+    <p> {{descripcion}} </p>
+    <p><a href="{% url 'mascotas' %}">Volver a mascotas</a></p>
+    
+
+{% endblock %}
+
+

@@ -2,12 +2,13 @@
 
 {% block title %}Mascotas{% endblock %}
 
-{% block content %}
+{% block content %} 
     <h1 class="text-center"> Lista de mascotas </h1>
     {% if mascotas %}
     <ul class="list-group">
         {% for mascota in mascotas %}
-        <li class="list-group-item"> {{mascota}}</li>
+        <!-- <li class="list-group-item"> {{mascota}}</li>-->
+        <a href="{% url 'detalle_mascota' mascota %}">{{ mascota }}</a>
         {% endfor %}
     </ul> 
     {% else %}
